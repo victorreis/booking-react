@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`menuItem component tests snapshot tests should render correctly 1`] = `
+<a
+  className="MenuItemContainer-react-typescript-template__sc-1n2i1yi-0 kaVFGQ"
+  data-testid="MenuItem"
+  href="/user/teste"
+  onClick={[Function]}
+>
+  text
+</a>
+`;

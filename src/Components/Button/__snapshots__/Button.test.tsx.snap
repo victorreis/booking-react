@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`button component tests snapshot tests should render correctly 1`] = `
+<button
+  className="ButtonContainer-react-typescript-template__sc-yih1da-0 gRnSCE"
+  data-testid="Button"
+  disabled={false}
+  onClick={[Function]}
+  onMouseEnter={[Function]}
+  onMouseLeave={[Function]}
+  size="LG"
+  type="button"
+>
+  text
+</button>
+`;
