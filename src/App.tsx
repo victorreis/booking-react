@@ -7,6 +7,7 @@ import { CLOSE_AFTER, POSITION } from './Config/Toast.config';
 import { CustomThemeProvider } from './Theme/CustomThemeProvider';
 
 import 'react-toastify/dist/ReactToastify.css';
+import 'react-calendar/dist/Calendar.css';
 
 export const App: React.FC = (): JSX.Element => {
   return (

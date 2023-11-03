@@ -4,6 +4,10 @@ export const GlobalStyle = createGlobalStyle`
   body {
     overflow: hidden;
   }
+
+  .full {
+    width: 100%;
+  }
 `;
 
 export const ContainerScroll = styled.div`
