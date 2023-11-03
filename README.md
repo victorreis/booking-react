@@ -1,21 +1,21 @@
-# react-typescript-template
+# booking-react
 
 ## Summary
 
 - [Introduction](#introduction)
-- [Features](#features)
+- [Features and requirements](#features-and-requirements)
 - [Bonus features and implementations](#bonus-features-and-implementations)
 - [Data consumed](#data-consumed)
 - [Installation](#installation)
 - [Running](#running)
 - [Another scripts](#another-scripts)
-- [Planning](#planning)
-- [Critique](#clitique)
+- [Critique](#critique)
 
 ## Introduction
 
-A simple and intuitive React TypeScript template.
-The main objective of this project is to practice some development skills through some technologies and concepts:
+A simple and intuitive React TypeScript app for a booking website. A booking is when a guest selects a start and end date and submits a reservation on a property.
+
+The main objective of this project is to show some development skills through some technologies and concepts:
 
 - ReactJS
 - React Hooks
@@ -37,9 +37,16 @@ The main objective of this project is to practice some development skills throug
 - YAGNI: “You Ain’t gonna need it”
 - DRY: “Do not Repeat Yourself”
 
-## Features
+## Features and requirements
 
-- ...
+- Create a booking
+- Read a booking
+- Update a booking
+- Delete a booking
+- Store the state from bookings in a global state store
+- Have some logic in place to prevent double (overlapping) bookings.
+- Validate the start and end dates for a booking.
+- The webpages should be fully responsive for desktop and mobile.
 
 ## Bonus features and implementations
 
@@ -75,3 +82,7 @@ The main objective of this project is to practice some development skills throug
 - Build: `yarn build`
 - Tests: `yarn test`
 - Scaffolding: `yarn g`
+
+# Critique
+
+- It could be done this or that way...
