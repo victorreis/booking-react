@@ -1,13 +1,26 @@
 import styled from 'styled-components';
 
+import { iconSizes } from '../../Theme/Types';
 import { toPx } from '../../Utils/Transform/toPx.util';
+import { Typography } from '../Typography';
 
 export const InputContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+`;
+
+export const InputIconsContainer = styled.div`
   display: flex;
   align-items: center;
 `;
 
+export const InputLabel = styled(Typography)`
+  margin: 0.5rem 0.5rem 0 calc(${iconSizes.md} + 0.5rem);
+`;
+
 export const Input = styled.input`
+  width: 100%;
   height: 3rem;
   margin: 0.5rem;
   border-width: 1px;

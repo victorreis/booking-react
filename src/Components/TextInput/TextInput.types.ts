@@ -1,3 +1,4 @@
+import { HTMLInputTypeAttribute } from 'react';
 import { IconType } from 'react-icons';
 
 import { TestProps } from '../../Config/Tests/Test.types';
@@ -14,9 +15,20 @@ export interface RequiredTextInputProps {
   onChange: (newValue: string) => void;
 }
 
-export interface DefaultTextInputProps {}
+export interface DefaultTextInputProps {
+  /**
+   * Input data type.
+   * @default 'text'
+   */
+  type?: HTMLInputTypeAttribute;
+}
 
 export interface OptionalTextInputProps {
+  /**
+   * Input label.
+   */
+  label?: string;
+
   /**
    * Regular expression to be used to filter the input data.
    */
@@ -31,6 +43,11 @@ export interface OptionalTextInputProps {
    * Right slot for putting any kind of ReactNode.
    */
   rightSlot?: IconType | string;
+
+  /**
+   * Min value in case of type="number".
+   */
+  min?: string;
 }
 
 export type TextInputProps = RequiredTextInputProps &
