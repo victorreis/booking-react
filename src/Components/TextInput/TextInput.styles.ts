@@ -2,6 +2,11 @@ import styled from 'styled-components';
 
 import { toPx } from '../../Utils/Transform/toPx.util';
 
+export const InputContainer = styled.div`
+  display: flex;
+  align-items: center;
+`;
+
 export const Input = styled.input`
   height: 3rem;
   margin: 0.5rem;

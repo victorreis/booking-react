@@ -1,3 +1,5 @@
+import { IconType } from 'react-icons';
+
 import { TestProps } from '../../Config/Tests/Test.types';
 
 export interface RequiredTextInputProps {
@@ -19,6 +21,16 @@ export interface OptionalTextInputProps {
    * Regular expression to be used to filter the input data.
    */
   filterInputRegex?: RegExp;
+
+  /**
+   * Left slot for putting any kind of ReactNode.
+   */
+  leftSlot?: IconType | string;
+
+  /**
+   * Right slot for putting any kind of ReactNode.
+   */
+  rightSlot?: IconType | string;
 }
 
 export type TextInputProps = RequiredTextInputProps &
