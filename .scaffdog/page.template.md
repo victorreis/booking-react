@@ -18,6 +18,7 @@ export * from './{{ inputs.value | pascal }}';
 
 ```tsx:
 import { PageContainer } from '../../App.styles';
+import { Typography } from '../../Components/Typography';
 import { TestProps } from '../../Config/Tests/Test.types';
 
 export const {{ inputs.value | camel }}Defaults: Required<TestProps> = {
@@ -27,7 +28,7 @@ export const {{ inputs.value | camel }}Defaults: Required<TestProps> = {
 export const {{ inputs.value | pascal }}: React.FC = (): JSX.Element => {
   return (
     <PageContainer data-testid={ {{ inputs.value | camel }}Defaults.testID}>
-      teste
+      <Typography>{{ inputs.value | pascal }} test</Typography>
     </PageContainer>
   );
 };
