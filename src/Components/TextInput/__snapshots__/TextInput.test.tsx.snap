@@ -13,7 +13,7 @@ exports[`textInput component tests snapshot tests should render correctly 1`] = 
     className="InputIconsContainer-react-typescript-template__sc-w2lyiw-1 wyjPB"
   >
     <input
-      className="Input-react-typescript-template__sc-w2lyiw-3 gbJsgl"
+      className="Input-react-typescript-template__sc-w2lyiw-3 hPZtxh"
       data-testid="TextInput"
       onChange={[Function]}
       type="text"
