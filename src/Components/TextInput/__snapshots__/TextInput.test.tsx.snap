@@ -2,10 +2,10 @@
 
 exports[`textInput component tests snapshot tests should render correctly 1`] = `
 <div
-  className="InputContainer-react-typescript-template__sc-w2lyiw-0 fflySv"
+  className="InputContainer-react-typescript-template__sc-w2lyiw-0 cGASVH"
 >
   <span
-    className="TypographyContainer-react-typescript-template__sc-foyag6-0 pfRQP InputLabel-react-typescript-template__sc-w2lyiw-2 copgbK"
+    className="TypographyContainer-react-typescript-template__sc-foyag6-0 pfRQP InputLabel-react-typescript-template__sc-w2lyiw-2 jLbcaz"
     data-testid="Typography"
     variant="body1"
   />
@@ -13,9 +13,10 @@ exports[`textInput component tests snapshot tests should render correctly 1`] = 
     className="InputIconsContainer-react-typescript-template__sc-w2lyiw-1 wyjPB"
   >
     <input
-      className="Input-react-typescript-template__sc-w2lyiw-3 fDnyCv"
+      className="Input-react-typescript-template__sc-w2lyiw-3 gbJsgl"
       data-testid="TextInput"
       onChange={[Function]}
+      type="text"
       value="text"
     />
   </div>

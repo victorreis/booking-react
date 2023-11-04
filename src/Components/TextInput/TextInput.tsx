@@ -33,7 +33,7 @@ const TextInputComponent: ForwardRefRenderFunction<
     value: initialValue,
     onChange,
     label,
-    type,
+    type = textInputDefaults.type,
     filterInputRegex,
     leftSlot,
     rightSlot,
