@@ -111,6 +111,8 @@
   },
   "dependencies": {
     "@craco/craco": "^7.1.0",
+    "@types/axios": "^0.14.0",
+    "axios": "^1.6.0",
     "dayjs": "^1.11.10",
     "nanoid": "^5.0.2",
     "react": "^18.2.0",
