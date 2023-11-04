@@ -47,7 +47,7 @@ export interface OptionalTextInputProps {
   /**
    * Min value in case of type="number".
    */
-  min?: string;
+  min?: string | number;
 }
 
 export type TextInputProps = RequiredTextInputProps &
