@@ -1,6 +1,7 @@
 import { PageContainer } from '../../App.styles';
 import { Typography } from '../../Components/Typography';
 import { TestProps } from '../../Config/Tests/Test.types';
+import { SearchForPropertyForm } from '../../Features/SearchForPropertyForm';
 
 export const homeDefaults: Required<TestProps> = {
   testID: 'Home',
@@ -9,7 +10,8 @@ export const homeDefaults: Required<TestProps> = {
 export const Home: React.FC = (): JSX.Element => {
   return (
     <PageContainer data-testid={homeDefaults.testID}>
-      <Typography>Hello world!</Typography>
+      <Typography variant="h2">Where to next, User123?</Typography>
+      <SearchForPropertyForm />
     </PageContainer>
   );
 };
