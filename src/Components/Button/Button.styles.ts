@@ -24,12 +24,18 @@ const getBackgroundColor = ({
   return theme.colors.background.default.darkest;
 };
 
-const getButtonDimensions = ({ size }: { size: ButtonSize }): CSSObject => {
+const getButtonDimensions = ({
+  $size,
+  $full,
+}: {
+  $size: ButtonSize;
+  $full: boolean;
+}): CSSObject => {
   const buttonDimensions: ButtonSizes = {
     MD: '2.2rem',
     LG: '3rem',
   };
-  return { height: buttonDimensions[size] };
+  return { height: buttonDimensions[$size], width: $full ? '100%' : 'auto' };
 };
 
 const getBorderColor = ({
@@ -64,6 +70,7 @@ export const ButtonContainer = styled.button<ButtonStyleProps>`
   padding-left: 1rem;
   padding-right: 1rem;
   box-sizing: border-box;
+  margin: 0.5rem;
 
   ${getButtonDimensions};
 

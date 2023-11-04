@@ -42,6 +42,12 @@ export interface DefaultButtonProps {
    * @default 'false'.
    */
   disabled?: boolean;
+
+  /**
+   * Make the button stretch.
+   * @default 'false'.
+   */
+  full?: boolean;
 }
 
 export interface OptionalButtonProps {
@@ -62,7 +68,11 @@ export type ButtonProps = RequiredButtonProps &
   TestProps &
   Omit<React.HTMLAttributes<HTMLButtonElement>, 'children' | 'onClick'>;
 
-export type ButtonStyleProps = Required<DefaultButtonProps> & {
+export type ButtonStyleProps = Required<
+  Pick<DefaultButtonProps, 'disabled'>
+> & {
   hoverFeedbackColor?: FeedbackColor;
   hoverText?: string;
+  $size: ButtonSize;
+  $full: boolean;
 };

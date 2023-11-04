@@ -10,6 +10,7 @@ export const buttonDefaults: Required<DefaultButtonProps> &
   type: 'button',
   size: 'LG',
   disabled: false,
+  full: false,
 };
 
 export const Button: React.FC<ButtonProps> = (props): JSX.Element => {
@@ -19,6 +20,7 @@ export const Button: React.FC<ButtonProps> = (props): JSX.Element => {
     type = buttonDefaults.type,
     size = buttonDefaults.size,
     disabled = buttonDefaults.disabled,
+    full = buttonDefaults.full,
     onClick,
     hoverFeedbackColor,
     hoverText,
@@ -47,6 +49,8 @@ export const Button: React.FC<ButtonProps> = (props): JSX.Element => {
 
   return (
     <ButtonContainer
+      $full={full}
+      $size={size}
       data-testid={testID}
       disabled={disabled}
       hoverFeedbackColor={hoverFeedbackColor}
@@ -54,7 +58,6 @@ export const Button: React.FC<ButtonProps> = (props): JSX.Element => {
       onClick={handleClick}
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
-      size={size}
       type={type}
       {...others}
     >
