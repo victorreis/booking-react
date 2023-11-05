@@ -1,9 +1,10 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`searchForPropertyForm component tests snapshot tests should render correctly 1`] = `
-<div
-  className="HomeSearchFormContainer-react-typescript-template__sc-zbiud9-2 fmCdBN"
+<form
+  className="StyledSearchForPropertyForm-react-typescript-template__sc-15jipz1-0 jXQbTC"
   data-testid="SearchForPropertyForm"
+  onSubmit={[Function]}
 >
   <div
     className="InputContainer-react-typescript-template__sc-w2lyiw-0 cGASVH"
@@ -40,6 +41,8 @@ exports[`searchForPropertyForm component tests snapshot tests should render corr
       <input
         className="Input-react-typescript-template__sc-w2lyiw-3 hPZtxh"
         data-testid="TextInput"
+        name="place"
+        onBlur={[Function]}
         onChange={[Function]}
         placeholder="Where do you go?"
         type="text"
@@ -48,7 +51,7 @@ exports[`searchForPropertyForm component tests snapshot tests should render corr
     </div>
   </div>
   <div
-    className="HomeRowContainer-react-typescript-template__sc-zbiud9-1 bSftgX"
+    className="SearchForPropertyRow-react-typescript-template__sc-15jipz1-1 eyvJso"
   >
     <svg
       color="#e8e8ee"
@@ -272,7 +275,7 @@ exports[`searchForPropertyForm component tests snapshot tests should render corr
                   </abbr>
                 </div>
                 <div
-                  className="react-calendar__month-view__weekdays__weekday react-calendar__month-view__weekdays__weekday--current react-calendar__month-view__weekdays__weekday--weekend"
+                  className="react-calendar__month-view__weekdays__weekday react-calendar__month-view__weekdays__weekday--weekend"
                   style={
                     Object {
                       "flexBasis": "14.285714285714286%",
@@ -293,7 +296,7 @@ exports[`searchForPropertyForm component tests snapshot tests should render corr
                   </abbr>
                 </div>
                 <div
-                  className="react-calendar__month-view__weekdays__weekday react-calendar__month-view__weekdays__weekday--weekend"
+                  className="react-calendar__month-view__weekdays__weekday react-calendar__month-view__weekdays__weekday--current react-calendar__month-view__weekdays__weekday--weekend"
                   style={
                     Object {
                       "flexBasis": "14.285714285714286%",
@@ -450,7 +453,8 @@ exports[`searchForPropertyForm component tests snapshot tests should render corr
                   </abbr>
                 </button>
                 <button
-                  className="react-calendar__tile react-calendar__tile--now react-calendar__month-view__days__day react-calendar__month-view__days__day--weekend"
+                  className="react-calendar__tile react-calendar__month-view__days__day react-calendar__month-view__days__day--weekend"
+                  disabled={true}
                   onClick={[Function]}
                   onFocus={[Function]}
                   onMouseOver={[Function]}
@@ -474,7 +478,7 @@ exports[`searchForPropertyForm component tests snapshot tests should render corr
                   </abbr>
                 </button>
                 <button
-                  className="react-calendar__tile react-calendar__month-view__days__day react-calendar__month-view__days__day--weekend"
+                  className="react-calendar__tile react-calendar__tile--now react-calendar__month-view__days__day react-calendar__month-view__days__day--weekend"
                   onClick={[Function]}
                   onFocus={[Function]}
                   onMouseOver={[Function]}
@@ -1212,6 +1216,8 @@ exports[`searchForPropertyForm component tests snapshot tests should render corr
         className="Input-react-typescript-template__sc-w2lyiw-3 hPZtxh"
         data-testid="TextInput"
         min="1"
+        name="adults"
+        onBlur={[Function]}
         onChange={[Function]}
         type="number"
         value=""
@@ -1254,6 +1260,8 @@ exports[`searchForPropertyForm component tests snapshot tests should render corr
         className="Input-react-typescript-template__sc-w2lyiw-3 hPZtxh"
         data-testid="TextInput"
         min="0"
+        name="children"
+        onBlur={[Function]}
         onChange={[Function]}
         type="number"
         value=""
@@ -1299,22 +1307,25 @@ exports[`searchForPropertyForm component tests snapshot tests should render corr
         className="Input-react-typescript-template__sc-w2lyiw-3 hPZtxh"
         data-testid="TextInput"
         min="1"
+        name="rooms"
+        onBlur={[Function]}
         onChange={[Function]}
         type="number"
         value=""
       />
     </div>
   </div>
+  {}
   <button
-    className="ButtonContainer-react-typescript-template__sc-yih1da-0 ikOMwW HomeButton-react-typescript-template__sc-zbiud9-3 RAAON"
+    className="ButtonContainer-react-typescript-template__sc-yih1da-0 ikOMwW SearchForPropertyButton-react-typescript-template__sc-15jipz1-2 kKCJbA"
     data-testid="Button"
     disabled={false}
     onClick={[Function]}
     onMouseEnter={[Function]}
     onMouseLeave={[Function]}
-    type="button"
+    type="submit"
   >
     SEARCH
   </button>
-</div>
+</form>
 `;

@@ -1,18 +1,26 @@
+import { useEffect } from 'react';
 import Calendar from 'react-calendar';
+import { useForm } from 'react-hook-form';
 import { BiSolidPlaneAlt, BiCalendarAlt } from 'react-icons/bi';
 import { BsFillPeopleFill, BsFillHousesFill } from 'react-icons/bs';
 import { FaChildren } from 'react-icons/fa6';
 
+import { yupResolver } from '@hookform/resolvers/yup';
 import { useTheme } from 'styled-components';
 
 import { TextInput } from '../../Components/TextInput';
 import { TestProps } from '../../Config/Tests/Test.types';
-import {
-  HomeSearchFormContainer,
-  HomeRowContainer,
-  HomeButton,
-} from '../../Pages/Home/Home.styles';
 import { iconSizes } from '../../Theme/Types';
+import { SearchForPropertyFormModel } from './SearchForPropertyForm.model';
+import {
+  SearchForPropertyFormSchema,
+  searchForPropertyFormDefaultValues,
+} from './SearchForPropertyForm.schema';
+import {
+  StyledSearchForPropertyForm,
+  SearchForPropertyRow,
+  SearchForPropertyButton,
+} from './SearchForPropertyForm.styles';
 import {
   SearchForPropertyFormProps,
   DefaultSearchForPropertyFormProps,
@@ -29,9 +37,38 @@ export const SearchForPropertyForm: React.FC<SearchForPropertyFormProps> = (
   const { testID = searchForPropertyFormDefaults.testID } = props;
   const theme = useTheme();
 
+  const { register, handleSubmit, formState, reset, clearErrors, setFocus } =
+    useForm({
+      mode: 'onSubmit',
+      reValidateMode: 'onChange',
+      defaultValues: searchForPropertyFormDefaultValues,
+      resolver: yupResolver<SearchForPropertyFormModel>(
+        SearchForPropertyFormSchema
+      ),
+    });
+  const { errors, isSubmitting } = formState;
+
+  const handleSubmitForm = (data: SearchForPropertyFormModel) => {
+    // eslint-disable-next-line no-console
+    console.log(data);
+    reset(undefined, { keepDefaultValues: true });
+    setFocus('place');
+    clearErrors();
+  };
+
+  useEffect(() => {
+    setFocus('place');
+  }, [setFocus]);
+
+  // const handleTextChange = ()
+
   return (
-    <HomeSearchFormContainer data-testid={testID}>
+    <StyledSearchForPropertyForm
+      data-testid={testID}
+      onSubmit={handleSubmit(handleSubmitForm)}
+    >
       <TextInput
+        {...register('place')}
         label="Place"
         leftSlot={BiSolidPlaneAlt}
         onChange={() => {}}
@@ -39,15 +76,22 @@ export const SearchForPropertyForm: React.FC<SearchForPropertyFormProps> = (
         value=""
       />
 
-      <HomeRowContainer>
+      <SearchForPropertyRow>
         <BiCalendarAlt
           color={theme.colors.background.default.lightest}
           size={iconSizes.md}
         />
-        <Calendar className="full" minDate={new Date()} selectRange />
-      </HomeRowContainer>
+        <Calendar
+          {...register('dateRange')}
+          className="full"
+          minDate={new Date()}
+          onChange={() => {}}
+          selectRange
+        />
+      </SearchForPropertyRow>
 
       <TextInput
+        {...register('adults')}
         label="Adults"
         leftSlot={BsFillPeopleFill}
         min="1"
@@ -57,6 +101,7 @@ export const SearchForPropertyForm: React.FC<SearchForPropertyFormProps> = (
       />
 
       <TextInput
+        {...register('children')}
         label="Children"
         leftSlot={FaChildren}
         min="0"
@@ -66,6 +111,7 @@ export const SearchForPropertyForm: React.FC<SearchForPropertyFormProps> = (
       />
 
       <TextInput
+        {...register('rooms')}
         label="Rooms"
         leftSlot={BsFillHousesFill}
         min="1"
@@ -74,7 +120,11 @@ export const SearchForPropertyForm: React.FC<SearchForPropertyFormProps> = (
         value=""
       />
 
-      <HomeButton onClick={() => {}}>SEARCH</HomeButton>
-    </HomeSearchFormContainer>
+      {JSON.stringify(errors)}
+
+      <SearchForPropertyButton disabled={isSubmitting} type="submit">
+        SEARCH
+      </SearchForPropertyButton>
+    </StyledSearchForPropertyForm>
   );
 };
