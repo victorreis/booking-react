@@ -17,7 +17,6 @@ describe('button component tests', () => {
 
   const requiredProps: RequiredButtonProps = {
     children: text,
-    onClick,
   };
 
   const setup = (props?: ButtonProps) => {
@@ -38,7 +37,10 @@ describe('button component tests', () => {
   describe('behavior tests', () => {
     it('should render the component', () => {
       expect.assertions(1);
-      setup().renderJestDom();
+      setup({
+        ...requiredProps,
+        onClick,
+      }).renderJestDom();
       const testInstance = screen.getByTestId(buttonDefaults.testID);
 
       expect(testInstance).toBeTruthy();
@@ -46,7 +48,10 @@ describe('button component tests', () => {
 
     it('should render the text', () => {
       expect.assertions(1);
-      setup().renderJestDom();
+      setup({
+        ...requiredProps,
+        onClick,
+      }).renderJestDom();
       const element = screen.getByText(text);
 
       expect(element).toBeInTheDocument();
@@ -54,7 +59,10 @@ describe('button component tests', () => {
 
     it(`should call the 'onCLick' callback when the button is clicked`, () => {
       expect.assertions(1);
-      setup().renderJestDom();
+      setup({
+        ...requiredProps,
+        onClick,
+      }).renderJestDom();
       const testInstance = screen.getByTestId(buttonDefaults.testID);
 
       fireEvent.click(testInstance);
@@ -64,7 +72,10 @@ describe('button component tests', () => {
 
     it(`should render '${buttonDefaults.type}' as the default 'type'`, () => {
       expect.assertions(1);
-      const instance = setup().renderRTR().root;
+      const instance = setup({
+        ...requiredProps,
+        onClick,
+      }).renderRTR().root;
       const element = instance.findByProps({
         type: buttonDefaults.type,
       });
@@ -87,7 +98,10 @@ describe('button component tests', () => {
   describe('style tests', () => {
     it('should have styled the correct styles', () => {
       expect.assertions(1);
-      setup().renderJestDom();
+      setup({
+        ...requiredProps,
+        onClick,
+      }).renderJestDom();
       const container = screen.getByTestId(buttonDefaults.testID);
 
       expect(container).toHaveStyle({
@@ -104,7 +118,12 @@ describe('button component tests', () => {
   describe('snapshot tests', () => {
     it('should render correctly', () => {
       expect.assertions(1);
-      const generatedJson = setup().renderRTR().toJSON();
+      const generatedJson = setup({
+        ...requiredProps,
+        onClick,
+      })
+        .renderRTR()
+        .toJSON();
 
       expect(generatedJson).toMatchSnapshot();
     });

@@ -17,11 +17,6 @@ export interface RequiredButtonProps {
    * Component's children.
    */
   children: string;
-
-  /**
-   * Callback function that is called when the component is clicked.
-   */
-  onClick: () => void;
 }
 
 export interface DefaultButtonProps {
@@ -51,6 +46,11 @@ export interface DefaultButtonProps {
 }
 
 export interface OptionalButtonProps {
+  /**
+   * Callback function that is called when the component is clicked.
+   */
+  onClick?: () => void;
+
   /**
    * Sets the background color when the component is in a hover state.
    */
