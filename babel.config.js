@@ -6,9 +6,10 @@ module.exports = {
       '@babel/preset-react',
       { targets: { node: 'automatic' }, runtime: 'automatic' },
     ],
+    'babel-preset-jest',
   ],
   plugins: [
-    '@babel/plugin-proposal-private-property-in-object',
+    'babel-plugin-transform-import-meta',
     '@babel/plugin-transform-modules-commonjs',
     [
       '@babel/plugin-transform-react-jsx',

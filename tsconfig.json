@@ -1,7 +1,7 @@
 {
   /* Visit https://aka.ms/tsconfig.json to read more about this file */
   "compileOnSave": true,
-  "include": ["src/**/*"],
+  "include": ["*.ts", "src/**/*"],
   "exclude": [
     "**/node_modules",
     "**/.*",
@@ -41,8 +41,12 @@
     "moduleResolution": "node",
     "baseUrl": "./",
     // "rootDirs": [],
-    "typeRoots": ["node_modules/@types", "node_modules/@testing-library"],
-    "types": ["node", "jest", "react", "react-dom"],
+    "typeRoots": [
+      "node_modules/@types",
+      "node_modules/@testing-library",
+      "types"
+    ],
+    "types": ["node", "jest", "react", "react-dom", "vite/client"],
     // "allowUmdGlobalAccess": true,
     "resolveJsonModule": true,
     // "noResolve": true,
