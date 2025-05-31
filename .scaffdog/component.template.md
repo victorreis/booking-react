@@ -192,7 +192,7 @@ const instance =
   });
 
   describe('snapshot tests', () => {
-    it(`should render correctly`, () => {
+    it(`should match snapshot`, () => {
       expect.assertions(1);
       const generatedJson = setup().renderRTR().toJSON();
 

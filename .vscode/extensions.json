@@ -4,6 +4,7 @@
   "recommendations": [
     "aaron-bond.better-comments",
     "bierner.emojisense",
+    "blackmist.linkcheckmd",
     "christian-kohler.npm-intellisense",
     "christian-kohler.path-intellisense",
     "davidanson.vscode-markdownlint",
@@ -18,12 +19,18 @@
     "formulahendry.auto-rename-tag",
     "formulahendry.docker-explorer",
     "humao.rest-client",
+    "idered.npm",
     "jvitor83.types-autoinstaller",
     "kisstkondoros.vscode-gutter-preview",
+    "klog.smart-react-component-extractor",
     "letmaik.git-tree-compare",
+    "mathiassoeholm.markdown-link-updater",
+    "meganrogge.template-string-converter",
     "mhutchie.git-graph",
     "mikestead.dotenv",
     "ms-azuretools.vscode-docker",
+    "ms-vsliveshare.vsliveshare",
+    "natqe.reload",
     "naumovs.color-highlight",
     "pkief.material-icon-theme",
     "pmneo.tsimporter",
@@ -33,11 +40,13 @@
     "steoates.autoimport",
     "stkb.rewrap",
     "stringham.move-ts",
+    "styled-components.vscode-styled-components",
+    "stylelint.vscode-stylelint",
     "tyriar.sort-lines",
     "visualstudioexptteam.vscodeintellicode",
+    "wix.glean",
     "wix.vscode-import-cost",
     "xabikos.javascriptsnippets",
-    "stylelint.vscode-stylelint",
-    "styled-components.vscode-styled-components"
+    "yoavbls.pretty-ts-errors"
   ]
 }

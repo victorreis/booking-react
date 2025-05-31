@@ -1,17 +1,25 @@
 {
   /* Visit https://aka.ms/tsconfig.json to read more about this file */
   "compileOnSave": true,
-  "include": ["*.ts", "src/**/*"],
+  "include": [".*.js", ".*.ts", "**/*.js", "**/*.jsx", "**/*.ts", "**/*.tsx"],
   "exclude": [
-    "**/node_modules",
-    "**/.*",
-    "**/build",
-    "**/docs",
-    "**/lib",
-    "**/dist",
-    "**/reports",
-    "**/__mocks__"
+    ".next",
+    ".vercel",
+    "build",
+    "coverage",
+    "dist",
+    "docs",
+    "lib",
+    "nbbuild",
+    "nbdist",
+    "node_modules",
+    "out-tsc",
+    "out",
+    "reports",
+    "storybook-static",
+    "tmp"
   ],
+
   "compilerOptions": {
     /* Projects */
     "incremental": true,
@@ -23,8 +31,8 @@
     "disableSizeLimit": true,
 
     /* Language and Environment */
-    "target": "es5",
-    "lib": ["dom", "dom.iterable", "es5", "esnext"],
+    "target": "es6",
+    "lib": ["dom", "dom.iterable", "esnext"],
     "jsx": "react-jsx",
     "experimentalDecorators": true,
     "emitDecoratorMetadata": true,
@@ -36,10 +44,17 @@
     "useDefineForClassFields": true,
 
     /* Modules */
-    "module": "commonjs",
+    "module": "esnext",
     // "rootDir": "./",
     "moduleResolution": "node",
     "baseUrl": "./",
+    "paths": {
+      "@/components/*": ["./src/components/*"],
+      "@/hooks/*": ["./src/hooks/*"],
+      "@/pages/*": ["./src/pages/*"],
+      "@/styles/*": ["./src/styles/*"],
+      "@/mocks/*": ["./__mocks__/*"]
+    },
     // "rootDirs": [],
     "typeRoots": [
       "node_modules/@types",
@@ -111,11 +126,13 @@
     "noFallthroughCasesInSwitch": true,
     "noUncheckedIndexedAccess": true,
     "noImplicitOverride": true,
-    "noPropertyAccessFromIndexSignature": true,
+    "noPropertyAccessFromIndexSignature": false,
     // "allowUnusedLabels": true,
-    // "allowUnreachableCode": true,
+    "allowUnreachableCode": false,
+    "noErrorTruncation": true,
 
     /* Completeness */
+    "skipDefaultLibCheck": true,
     "skipLibCheck": true
   }
 }
